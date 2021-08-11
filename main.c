@@ -3,9 +3,7 @@
 #include <string.h>
 #include "matriz.h"
 #include "leitura.h"
-
-
-
+#include <lapacke.h>
 
 int main ()
 {
@@ -16,6 +14,8 @@ int main ()
     path =config();
     mat = r_dmatfcsv(path,'\t',&nlin,&ncol);
     imprimirmat( mat,  nlin, ncol);
+    (void) =LAPACKE_dgetrf()
 
+    
     return 0;
 }
