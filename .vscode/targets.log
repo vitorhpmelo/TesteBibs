@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 11 18:39:16 2021
+# Make data base, printed on Thu Aug 12 14:16:08 2021
 
 # Variables
 
@@ -53,7 +53,7 @@ _ = /usr/share/code/code
 # makefile (from 'Makefile', line 2)
 CFLAGS = -o -W -g -Wall
 # environment
-JOURNAL_STREAM = 8:38727
+JOURNAL_STREAM = 8:39511
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-pop:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -73,7 +73,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 1371
+MANAGERPID = 1364
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -89,7 +89,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1767,unix/pop-os:/tmp/.ICE-unix/1767
+SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1985,unix/pop-os:/tmp/.ICE-unix/1985
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,7 +99,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=865330db-dda3-4945-bf78-c35e4a1026a7&iid=865330db-dda3-4945-bf78-c35e4a1026a7&sid=865330db-dda3-4945-bf78-c35e4a1026a7","uploadToServer":true}
 # environment
-INVOCATION_ID = bfbf3fabbd304ca395c4563169136748
+INVOCATION_ID = 372c8560ecaa4cd2ad88824dab02c888
 # makefile (from 'Makefile', line 4)
 LDFLAGS = -lm 
 # default
@@ -111,7 +111,7 @@ XDG_SESSION_DESKTOP = pop
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 23523
+GIO_LAUNCHED_DESKTOP_FILE_PID = 9579
 # automatic
 %F = $(notdir $%)
 # environment
@@ -125,7 +125,7 @@ PWD = /home/vitorhpmelo/Programas/TesteBibs
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1665
+SSH_AGENT_PID = 1846
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = pop:GNOME
 # environment
@@ -165,7 +165,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = pop
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9c4b3f28-953a-4ec6-937d-535a43ca038c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ba2435ad-9a55-4b7b-9b75-dcca4fdf52b7.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -243,7 +243,7 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 23523
+VSCODE_PID = 9579
 # variable set hash-table stats:
 # Load=117/1024=11%, Rehash=0, Collisions=22/154=14%
 
@@ -282,13 +282,13 @@ all: output
 Makefile:
 #  Implicit rule search has been done.
 #  Last modified 2021-08-11 15:30:35.158517402
+ 
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 matriz.o:
 #  Implicit rule search has been done.
- 
 #  Last modified 2021-08-11 15:30:26.146517706
 #  File has been updated.
 #  Successfully updated.
@@ -361,6 +361,6 @@ leitura.o:
 # strcache performance: lookups = 44 / hit rate = 29%
 # hash-table stats:
 # Load=31/8192=0%, Rehash=0, Collisions=1/44=2%
-# Finished Make data base on Wed Aug 11 18:39:16 2021
+# Finished Make data base on Thu Aug 12 14:16:08 2021
 
  
