@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "lapack.h": "c",
+        "lapacke_utils.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

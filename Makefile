@@ -1,9 +1,9 @@
 CC=gcc
 CFLAGS= -o -W -g -Wall
-LIBS= -L/usr/local/lib -llapack -lblas
-LDFLAGS= -lm 
+LIBS= -L/usr/local/lib 
+LDFLAGS= -lm -llapacke -lblas
 OBJFILES = main.o leitura.o matriz.o
-TARGET = output
+TARGET = a
 
 all: $(TARGET)
 
