@@ -30,7 +30,7 @@ double** r_dmatfcsv(char path[100],char sep,int *nlin,int *ncol)//Lê uma matriz
     char num[100];
     num[0]='\0';
     *nlin=0;
-    *ncol=0;
+    *ncol=1;
     double **mat;
     int i =0,j=0;
     arquivo = fopen(path,"r");
@@ -60,6 +60,7 @@ double** r_dmatfcsv(char path[100],char sep,int *nlin,int *ncol)//Lê uma matriz
         {
             mat[i][j]=(double) atof(num);
             i++;
+            j=0;
             num[0]='\0';
         }
         else 
@@ -68,7 +69,7 @@ double** r_dmatfcsv(char path[100],char sep,int *nlin,int *ncol)//Lê uma matriz
         }
     }
 
-
+    fclose(arquivo);
     return mat;
 }
 
@@ -99,3 +100,43 @@ void fimprimirmat(FILE* arquivo, double** mat, int linha, int col)
 		fprintf(arquivo, "\n");
 	}
 }
+void imprimirvet_double(double* vet, int linha)
+{
+	int i;
+	for (i = 0; i < linha; i++)
+	{
+		printf("%e ", vet[i]);
+		printf("\n");
+	}
+}
+
+void fimprimirvet_double(FILE* arquivo, double* vet, int linha)
+{
+	int i;
+	for (i = 0; i < linha; i++)
+	{
+		fprintf(arquivo, "%e", vet[i]);
+		fprintf(arquivo, "\n");
+	}
+}
+
+void imprimirvet_int(int* vet, int linha)
+{
+	int i;
+	for (i = 0; i < linha; i++)
+	{
+		printf("%d ", vet[i]);
+		printf("\n");
+	}
+}
+
+void fimprimirvet_int(FILE* arquivo, int* vet, int linha)
+{
+	int i;
+	for (i = 0; i < linha; i++)
+	{
+		fprintf(arquivo, "%d", vet[i]);
+		fprintf(arquivo, "\n");
+	}
+}
+

@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 13 18:22:33 2021
+# Make data base, printed on Fri Aug 13 15:41:37 2021
 
 # Variables
 
@@ -28,8 +30,6 @@ XDG_SESSION_CLASS = user
 XDG_SESSION_TYPE = x11
 # environment
 VSCODE_LOG_NATIVE = false
-# makefile (from 'Makefile', line 6)
-TARGET = a
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
@@ -43,21 +43,19 @@ GDMSESSION = pop
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/vitorhpmelo/Programas/TesteBibs
+CURDIR := /home/vitorhpmelo/Programas/TesteBibs/SuperLU
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/share/code/code
-# makefile (from 'Makefile', line 2)
-CFLAGS = -o -W -g -Wall
 # environment
-JOURNAL_STREAM = 8:34582
+JOURNAL_STREAM = 8:35802
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-pop:/etc/xdg
-# makefile (from 'Makefile', line 1)
-MAKEFILE_LIST :=  Makefile
+# makefile
+MAKEFILE_LIST := 
 # automatic
 @F = $(notdir $@)
 # environment
@@ -73,7 +71,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 1347
+MANAGERPID = 1378
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -89,7 +87,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1903,unix/pop-os:/tmp/.ICE-unix/1903
+SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1878,unix/pop-os:/tmp/.ICE-unix/1878
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,9 +97,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=865330db-dda3-4945-bf78-c35e4a1026a7&iid=865330db-dda3-4945-bf78-c35e4a1026a7&sid=865330db-dda3-4945-bf78-c35e4a1026a7","uploadToServer":true}
 # environment
-INVOCATION_ID = 51bfefbe6da04fa5854e6c45f0c2e491
-# makefile (from 'Makefile', line 4)
-LDFLAGS = -lm -llapacke -lblas
+INVOCATION_ID = a21eaacde6c545ea9a4e1d9a5ad70915
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -111,21 +107,19 @@ XDG_SESSION_DESKTOP = pop
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3590
+GIO_LAUNCHED_DESKTOP_FILE_PID = 9739
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :1
-# makefile (from 'Makefile', line 5)
-OBJFILES = main.o leitura.o matriz.o
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/vitorhpmelo/Programas/TesteBibs
+PWD = /home/vitorhpmelo/Programas/TesteBibs/SuperLU
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1723
+SSH_AGENT_PID = 1732
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = pop:GNOME
 # environment
@@ -160,12 +154,10 @@ MAKECMDGOALS := all
 QT_IM_MODULE = ibus
 # environment
 SHLVL = 0
-# makefile (from 'Makefile', line 1)
-CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = pop
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e9fcc54e-ced3-465f-a84d-d7762b499b3f.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b707c3cb-ca79-4bca-a4e1-e1779df9eb96.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -173,7 +165,7 @@ USER = vitorhpmelo
 # environment
 LC_MONETARY = en_US.UTF-8
 # makefile
-.DEFAULT_GOAL := all
+.DEFAULT_GOAL := 
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # automatic
@@ -222,8 +214,6 @@ LC_MEASUREMENT = en_US.UTF-8
 LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# makefile (from 'Makefile', line 3)
-LIBS = -L/usr/local/lib 
 # automatic
 ^F = $(notdir $^)
 # default
@@ -243,9 +233,9 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3590
+VSCODE_PID = 9739
 # variable set hash-table stats:
-# Load=117/1024=11%, Rehash=0, Collisions=21/145=14%
+# Load=111/1024=11%, Rehash=0, Collisions=19/133=14%
 
 # Pattern-specific Variable Values
 
@@ -253,9 +243,9 @@ VSCODE_PID = 3590
 
 # Directories
 
-# . (device 2052, inode 20190864): 29 files, no impossibilities.
+# . (device 2052, inode 20321858): 11 files, no impossibilities.
 
-# 29 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -263,35 +253,26 @@ VSCODE_PID = 3590
 
 # Files
 
-a: main.o leitura.o matriz.o
-#  Implicit rule search has not been done.
-#  Last modified 2021-08-12 14:31:41.034881248
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 11):
-		$(CC) $(CFLAGS) -o $(TARGET) $(OBJFILES) $(LDFLAGS) $(LIBS)
-
-all: a
+# Not a target:
+all:
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
-#  File has been updated.
-#  Successfully updated.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-12 14:31:41.034881248
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 
 # Not a target:
-matriz.o:
- 
+makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-11 15:30:26.146517706
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 
 # Not a target:
 .DEFAULT:
@@ -299,41 +280,28 @@ matriz.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-clean:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 14):
-	rm -f $(OBJFILES) $(TARGET) *~ 
-
+ 
 # Not a target:
-main.o:
+GNUmakefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-12 14:31:41.034881248
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-leitura.o:
-#  Implicit rule search has been done.
-#  Last modified 2021-08-11 15:30:26.110517707
-#  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 
 # files hash-table stats:
-# Load=9/1024=1%, Rehash=0, Collisions=0/25=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 269 B / avg = 7 B
-# current buf: size = 8162 B / used = 269 B / count = 35 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 169 B / avg = 8 B
+# current buf: size = 8162 B / used = 169 B / count = 19 / avg = 8 B
 
-# strcache performance: lookups = 48 / hit rate = 27%
+# strcache performance: lookups = 22 / hit rate = 13%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=1/48=2%
-# Finished Make data base on Fri Aug 13 18:22:33 2021
+# Load=19/8192=0%, Rehash=0, Collisions=1/22=5%
+# Finished Make data base on Fri Aug 13 15:41:37 2021
 
  

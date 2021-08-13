@@ -3,6 +3,6 @@ make: Entering directory '/home/vitorhpmelo/Programas/TesteBibs'
 gcc -o -W -g -Wall   -c -o main.o main.c
 gcc -o -W -g -Wall   -c -o leitura.o leitura.c
 gcc -o -W -g -Wall   -c -o matriz.o matriz.c
-gcc -o -W -g -Wall -o output main.o leitura.o matriz.o -lm  -L/usr/local/lib -llapack -lblas
+gcc -o -W -g -Wall -o a main.o leitura.o matriz.o -lm -llapacke -lblas -L/usr/local/lib 
 make: Leaving directory '/home/vitorhpmelo/Programas/TesteBibs'
  
