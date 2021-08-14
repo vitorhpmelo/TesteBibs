@@ -6,19 +6,17 @@
 #define zero 1e-15
 
 
-double** matrizDinamica(int linha, int coluna)
+int matrizDinamica(double*** mat,int linha, int coluna)
 {
-
-    //aloca matriz dinamica
-
+   //aloca matriz dinamica
 	int i;
-	double** mat;
-	mat = (double**)calloc(linha, sizeof(double*));
+
+	(*mat) = (double**)calloc(linha, sizeof(double*));
 	for (i = 0; i < linha; i++)
 	{
-		mat[i] = (double*)calloc(coluna, sizeof(double));
+		(*mat)[i] = (double*)calloc(coluna, sizeof(double));
 	}
-	return mat;
+	return 0;
 }
 
 void liberarMatrizdina(double** mat, int linha)
@@ -31,7 +29,7 @@ void liberarMatrizdina(double** mat, int linha)
 	free(mat);
 }
 
-int matdb_to_CSC(double **A, int nlin,int ncol,int* nnz, double* a,int* r_index, int* c_ptr  )
+int matdb_to_CSC(double **A, int nlin,int ncol,int* nnz, double** a,int** r_index, int** c_ptr  )
 {
 
 
@@ -51,44 +49,63 @@ int matdb_to_CSC(double **A, int nlin,int ncol,int* nnz, double* a,int* r_index,
 			
 		}
 	}
-	a=(double*)malloc((*nnz)*sizeof(double));
-	r_index=(int*)malloc((*nnz)*sizeof(int));
-	c_ptr=(int*)malloc((ncol+1)*sizeof(int));
-
+	(*a)=(double*)malloc((*nnz)*sizeof(double));
+	(*r_index)=(int*)malloc((*nnz)*sizeof(int));
+	(*c_ptr)=(int*)calloc((ncol+1),sizeof(int));
+	//imprimirmat(*A,ncol,nlin);
 	k=0;
 	m=0;
+	(*c_ptr[m])=k;
+
 	for(j=0;j<ncol;j++)
 	{
-		for(i=0;i<ncol;i++)
+		for(i=0;i<nlin;i++)
 		{
-			
 			if (fabs(A[i][j])>zero) 
 			{
-				a[k]=A[i][j];
-				r_index[k]=i;
+				(*a)[k]=A[i][j];
+				(*r_index)[k]=i;
 				k++;
 			}
 		}
-		c_ptr[m]=k;
 		m++;
+		(*c_ptr)[m]=k;
 
 	}
 
 
 
-	printf("Numero de não zeros %d\n\n",(*nnz));
-	printf("Vetor de valores:\n");
-	imprimirvet_double(a,*nnz);
-	printf("Vetor de linhas:\n");
-	imprimirvet_int(r_index,*nnz);
-	printf("Vetor de col:\n");
-	imprimirvet_int(c_ptr,ncol+1);
+	//printf("Numero de não zeros %d\n\n",(*nnz));
+	//printf("Vetor de valores:\n");
+	//imprimirvet_double(a,*nnz);
+	//printf("Vetor de linhas:\n");
+	//imprimirvet_int(r_index,*nnz);
+	//printf("Vetor de col:\n");
+	//imprimirvet_int(c_ptr,ncol+1);
 
 	return 0;
 }
 
-int CSC_to_matdb (double **A, int nlin,int ncol,int* nnz, int* a,int* r_index, int* c_ptr  )
+int CSC_to_matdb (double ***A, int nlin,int ncol,int* nnz, double* a,int* r_index, int* c_ptr  )
 {
+
+
+	int i,j,k,m;
+	(void) matrizDinamica(A,nlin,ncol);
+
+	i=0;
+	j=0;
+	k=0;
+
+	for(m=0;m<ncol;m++)
+	{
+		for(j=0;j<c_ptr[m+1]-c_ptr[m];j++)
+		{
+			(*A)[r_index[k]][c_ptr[m]]=a[k];
+			k++;
+		}
+	}
+
 
 	return 0;
 }

@@ -22,7 +22,7 @@ char *config()
 }
 
 
-double** r_dmatfcsv(char path[100],char sep,int *nlin,int *ncol)//Lê uma matriz de double em csv
+int r_dmatfcsv(double ***mat,char path[100],char sep,int *nlin,int *ncol)//Lê uma matriz de double em csv
 {
     
     FILE *arquivo=NULL;
@@ -31,7 +31,6 @@ double** r_dmatfcsv(char path[100],char sep,int *nlin,int *ncol)//Lê uma matriz
     num[0]='\0';
     *nlin=0;
     *ncol=1;
-    double **mat;
     int i =0,j=0;
     arquivo = fopen(path,"r");
    
@@ -42,7 +41,7 @@ double** r_dmatfcsv(char path[100],char sep,int *nlin,int *ncol)//Lê uma matriz
         if (p=='\n') (*nlin)++;
     }
 
-    mat=matrizDinamica(*nlin,*ncol);
+    (void) matrizDinamica(mat,*nlin,*ncol);
 
     rewind(arquivo);
 
@@ -52,13 +51,13 @@ double** r_dmatfcsv(char path[100],char sep,int *nlin,int *ncol)//Lê uma matriz
          
         if (p==sep){
             
-            mat[i][j]=(double) atof(num);
+            (*mat)[i][j]=(double) atof(num);
             j++;
             num[0]='\0';
         }
         else if (p=='\n') 
         {
-            mat[i][j]=(double) atof(num);
+            (*mat)[i][j]=(double) atof(num);
             i++;
             j=0;
             num[0]='\0';
@@ -70,7 +69,7 @@ double** r_dmatfcsv(char path[100],char sep,int *nlin,int *ncol)//Lê uma matriz
     }
 
     fclose(arquivo);
-    return mat;
+    return 0;
 }
 
 void imprimirmat(double** mat, int linha, int col)
