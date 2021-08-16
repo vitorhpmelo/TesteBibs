@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 16 15:57:56 2021
+# Make data base, printed on Mon Aug 16 17:59:40 2021
 
 # Variables
 
@@ -53,7 +53,7 @@ _ = /usr/share/code/code
 # makefile (from 'Makefile', line 2)
 CFLAGS = -o -W -g
 # environment
-JOURNAL_STREAM = 8:41225
+JOURNAL_STREAM = 8:42151
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-pop:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -73,7 +73,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 1351
+MANAGERPID = 1346
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -89,7 +89,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1677,unix/pop-os:/tmp/.ICE-unix/1677
+SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1603,unix/pop-os:/tmp/.ICE-unix/1603
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,9 +99,9 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=865330db-dda3-4945-bf78-c35e4a1026a7&iid=865330db-dda3-4945-bf78-c35e4a1026a7&sid=865330db-dda3-4945-bf78-c35e4a1026a7","uploadToServer":true}
 # environment
-INVOCATION_ID = 29cfdf79d394418bac04fd12a618dafe
+INVOCATION_ID = cbab52ab95b147c59a5a8b9878959a0d
 # makefile (from 'Makefile', line 3)
-LDFLAGS = -lm -llapacke -lblas
+LDFLAGS = -lm -llapacke -lblas -llapack
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -111,7 +111,7 @@ XDG_SESSION_DESKTOP = pop
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3287
+GIO_LAUNCHED_DESKTOP_FILE_PID = 8249
 # automatic
 %F = $(notdir $%)
 # environment
@@ -125,7 +125,7 @@ PWD = /home/vitorhpmelo/Programas/TesteBibs/LAPACK/Teste
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1629
+SSH_AGENT_PID = 1558
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = pop:GNOME
 # environment
@@ -165,7 +165,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = pop
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f72fbf13-3c12-4eca-b19f-6ec4c078e83d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ba7c9ee5-ea82-4856-9f92-cf77d55f47ae.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -241,7 +241,7 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3287
+VSCODE_PID = 8249
 # variable set hash-table stats:
 # Load=116/1024=11%, Rehash=0, Collisions=21/144=15%
 
@@ -271,7 +271,7 @@ all: output
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-16 15:35:16.258802799
+#  Last modified 2021-08-16 16:09:10.718888825
 #  File has been updated.
 #  Successfully updated.
 
@@ -295,17 +295,17 @@ clean:
 #  recipe to execute (from 'Makefile', line 13):
 	rm -f $(OBJFILES) $(TARGET) *~ 
 
+ 
 # Not a target:
 main.o:
 #  Implicit rule search has been done.
- 
-#  Last modified 2021-08-16 15:42:31.742801879
+#  Last modified 2021-08-16 17:55:19.470936483
 #  File has been updated.
 #  Successfully updated.
 
 output: main.o leitura.o matriz.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-16 15:42:31.802801879
+#  Last modified 2021-08-16 17:55:19.530936483
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -332,6 +332,6 @@ leitura.o:
 # strcache performance: lookups = 35 / hit rate = 37%
 # hash-table stats:
 # Load=22/8192=0%, Rehash=0, Collisions=1/35=3%
-# Finished Make data base on Mon Aug 16 15:57:56 2021
+# Finished Make data base on Mon Aug 16 17:59:40 2021
 
  

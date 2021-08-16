@@ -3,6 +3,7 @@
 #include <string.h>
 #include "matriz.h"
 #include "leitura.h"
+#include <lapack.h>
 #include <lapacke.h>
 
 
@@ -43,15 +44,15 @@ int main ()
     path =config();
     (void) r_dmatfcsv(&mat,path,',',&nlin,&ncol);
    // fou=fopen("fout.csv","w");
-    
+    int info,lda;
     
     m=nlin;
     n=ncol;
-    lda_t=maior(1,nlin);
+    lda=maior(1,nlin);
     tam=menor(ncol,nlin);
     printf("Matriz lida \n\n");
     imprimirmat(mat,nlin,ncol);
-    ipiv_t=(lapack_int *)malloc(tam*sizeof(lapack_int));
+    ipiv_t=(int *)malloc(tam*sizeof(int));
    
     A=(double*)calloc(nlin*ncol, sizeof(double));
     
@@ -63,11 +64,16 @@ int main ()
             k++;
         }
     }
-    info_t =LAPACKE_dgetrf(LAPACK_ROW_MAJOR,m,n,A,lda_t,ipiv_t);
+    
+    dgetrf_(&nlin,&ncol,*mat,&lda,ipiv_t,&info);
   //  fimprimirmat(fou, mat,  nlin, ncol);
     printf("Matriz saida \n\n");
     imprimirmat( mat,  nlin, ncol);
-    printf("%d\n\n",info_t);
+    for (i=0;i<ncol;i++)
+    {
+        printf("%e\t",mat[i][i]);
+    }
+    printf("\n%d\n\n",info);
     //
     //return 0;
 }
