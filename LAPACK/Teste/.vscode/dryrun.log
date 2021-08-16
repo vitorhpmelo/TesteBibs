@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/vitorhpmelo/Programas/TesteBibs/LAPACK/Teste'
+gcc -o -W -g   -c -o main.o main.c
+gcc -o -W -g   -c -o leitura.o leitura.c
+gcc -o -W -g   -c -o matriz.o matriz.c
+gcc -o -W -g -o output main.o leitura.o matriz.o -lm -llapacke -lblas
+make: Leaving directory '/home/vitorhpmelo/Programas/TesteBibs/LAPACK/Teste'
+ 

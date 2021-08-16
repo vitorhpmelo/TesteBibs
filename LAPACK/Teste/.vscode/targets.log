@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 16 13:48:09 2021
+# Make data base, printed on Mon Aug 16 15:57:56 2021
 
 # Variables
 
@@ -43,7 +43,7 @@ GDMSESSION = pop
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/vitorhpmelo/Programas/TesteBibs/SuperLU
+CURDIR := /home/vitorhpmelo/Programas/TesteBibs/LAPACK/Teste
 # makefile
 SHELL = /bin/sh
 # environment
@@ -53,7 +53,7 @@ _ = /usr/share/code/code
 # makefile (from 'Makefile', line 2)
 CFLAGS = -o -W -g
 # environment
-JOURNAL_STREAM = 8:42267
+JOURNAL_STREAM = 8:41225
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-pop:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -73,7 +73,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 1338
+MANAGERPID = 1351
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -89,7 +89,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1874,unix/pop-os:/tmp/.ICE-unix/1874
+SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1677,unix/pop-os:/tmp/.ICE-unix/1677
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,9 +99,9 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=865330db-dda3-4945-bf78-c35e4a1026a7&iid=865330db-dda3-4945-bf78-c35e4a1026a7&sid=865330db-dda3-4945-bf78-c35e4a1026a7","uploadToServer":true}
 # environment
-INVOCATION_ID = d4b07b7e1c1d4da6b8df41b97b2ab737
+INVOCATION_ID = 29cfdf79d394418bac04fd12a618dafe
 # makefile (from 'Makefile', line 3)
-LDFLAGS = -lm -lsuperlu
+LDFLAGS = -lm -llapacke -lblas
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -111,7 +111,7 @@ XDG_SESSION_DESKTOP = pop
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 7917
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3287
 # automatic
 %F = $(notdir $%)
 # environment
@@ -121,11 +121,11 @@ OBJFILES = main.o leitura.o matriz.o
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/vitorhpmelo/Programas/TesteBibs/SuperLU
+PWD = /home/vitorhpmelo/Programas/TesteBibs/LAPACK/Teste
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1752
+SSH_AGENT_PID = 1629
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = pop:GNOME
 # environment
@@ -165,7 +165,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = pop
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f101e22a-824c-4c3e-b2e9-f370c92b6d19.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f72fbf13-3c12-4eca-b19f-6ec4c078e83d.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -178,7 +178,6 @@ LC_MONETARY = en_US.UTF-8
 XDG_CURRENT_DESKTOP = Unity
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
- 
 # environment
 LC_TELEPHONE = en_US.UTF-8
 # default
@@ -242,7 +241,7 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 7917
+VSCODE_PID = 3287
 # variable set hash-table stats:
 # Load=116/1024=11%, Rehash=0, Collisions=21/144=15%
 
@@ -252,9 +251,9 @@ VSCODE_PID = 7917
 
 # Directories
 
-# . (device 2052, inode 807284): 19 files, no impossibilities.
+# . (device 2052, inode 807279): 16 files, no impossibilities.
 
-# 19 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -272,14 +271,14 @@ all: output
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-14 16:41:34.962905812
+#  Last modified 2021-08-16 15:35:16.258802799
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 matriz.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-14 16:41:34.962905812
+#  Last modified 2021-08-16 15:35:22.286802786
 #  File has been updated.
 #  Successfully updated.
 
@@ -299,13 +298,14 @@ clean:
 # Not a target:
 main.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-14 17:35:08.246899024
+ 
+#  Last modified 2021-08-16 15:42:31.742801879
 #  File has been updated.
 #  Successfully updated.
 
 output: main.o leitura.o matriz.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-14 17:35:08.278899024
+#  Last modified 2021-08-16 15:42:31.802801879
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -314,7 +314,7 @@ output: main.o leitura.o matriz.o
 # Not a target:
 leitura.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-14 16:41:34.962905812
+#  Last modified 2021-08-16 15:35:22.250802786
 #  File has been updated.
 #  Successfully updated.
 
@@ -326,12 +326,12 @@ leitura.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 205 B / avg = 8 B
-# current buf: size = 8162 B / used = 205 B / count = 25 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 190 B / avg = 8 B
+# current buf: size = 8162 B / used = 190 B / count = 22 / avg = 8 B
 
-# strcache performance: lookups = 38 / hit rate = 34%
+# strcache performance: lookups = 35 / hit rate = 37%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=1/38=3%
-# Finished Make data base on Mon Aug 16 13:48:09 2021
+# Load=22/8192=0%, Rehash=0, Collisions=1/35=3%
+# Finished Make data base on Mon Aug 16 15:57:56 2021
 
  

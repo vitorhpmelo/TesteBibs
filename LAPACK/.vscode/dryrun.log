@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/vitorhpmelo/Programas/TesteBibs/LAPACK'
+make: Leaving directory '/home/vitorhpmelo/Programas/TesteBibs/LAPACK'
+ 
+make: *** No rule to make target 'main.o', needed by 'a'.
+make: *** No rule to make target 'leitura.o', needed by 'a'.
+make: *** No rule to make target 'matriz.o', needed by 'a'.
+ 
