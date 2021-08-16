@@ -52,7 +52,7 @@ int main ()
     tam=menor(ncol,nlin);
     printf("Matriz lida \n\n");
     imprimirmat(mat,nlin,ncol);
-    ipiv_t=(int *)malloc(tam*sizeof(int));
+    //ipiv_t=(int *)malloc(tam*sizeof(int));
    
     A=(double*)calloc(nlin*ncol, sizeof(double));
     
@@ -65,7 +65,7 @@ int main ()
         }
     }
     
-    dgetrf_(&nlin,&ncol,*mat,&lda,ipiv_t,&info);
+    dgetrf(&nlin,&ncol,*mat,&lda,ipiv_t,&info);
   //  fimprimirmat(fou, mat,  nlin, ncol);
     printf("Matriz saida \n\n");
     imprimirmat( mat,  nlin, ncol);
