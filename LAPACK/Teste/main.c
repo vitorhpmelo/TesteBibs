@@ -35,7 +35,7 @@ int main ()
     char *path;
     int nlin,ncol;
     int i,j,k=0,tam;
-    double **mat;
+    double **mat,**mat_o;
     double *A;
     lapack_int info_t,m,n,lda_t;
     lapack_int *ipiv_t;
@@ -46,6 +46,9 @@ int main ()
    // fou=fopen("fout.csv","w");
     int info,lda;
     
+
+
+    matrizDinamica(&mat_o,nlin,ncol);
     m=nlin;
     n=ncol;
     lda=maior(1,nlin);
@@ -65,15 +68,32 @@ int main ()
         }
     }
     
-    dgetrf(&nlin,&ncol,*mat,&lda,ipiv_t,&info);
-  //  fimprimirmat(fou, mat,  nlin, ncol);
-    printf("Matriz saida \n\n");
-    imprimirmat( mat,  nlin, ncol);
-    for (i=0;i<ncol;i++)
+    dgetrf_(&nlin,&ncol,A,&lda,ipiv_t,&info);
+
+    k=0;
+
+    for (i=0;i<nlin;i++)
     {
-        printf("%e\t",mat[i][i]);
+        for (j=0;j<ncol;j++)
+        {
+            mat_o[i][j]=A[k];
+            k++;
+        }
     }
-    printf("\n%d\n\n",info);
+
+    printf("\n\nMatriz LU \n\n");
+
+    imprimirmat(mat_o,nlin,ncol);
+
+
+    //fimprimirmat(fou, mat,  nlin, ncol);
+    //printf("Matriz saida \n\n");
+    //imprimirmat( &mat,  nlin, ncol);
+    //for (i=0;i<ncol;i++)
+    //{
+    //    printf("%e\t",mat[i][i]);
+    //}
+    //printf("\n%d\n\n",info);
     //
     //return 0;
 }
