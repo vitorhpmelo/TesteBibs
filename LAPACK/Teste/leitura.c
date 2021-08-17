@@ -139,3 +139,14 @@ void fimprimirvet_int(FILE* arquivo, int* vet, int linha)
 	}
 }
 
+void imprimirmat_diag(double** mat, int col)
+{
+	int i, j;
+	for (i = 0; i < col; i++)
+	{
+
+		printf("%.2e\t ", mat[i][i]);
+
+	}
+    printf("\n");
+}

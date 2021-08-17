@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include "matriz.h"
 #include "leitura.h"
 #include <lapack.h>
@@ -33,7 +34,7 @@ int menor(int a,int b)
 int main ()
 {
     char *path;
-    int nlin,ncol;
+    int nlin,ncol,nnd;
     int i,j,k=0,tam;
     double **mat,**mat_o;
     double *A;
@@ -67,7 +68,8 @@ int main ()
             k++;
         }
     }
-    
+
+       
     dgetrf_(&nlin,&ncol,A,&lda,ipiv_t,&info);
 
     k=0;
@@ -81,19 +83,15 @@ int main ()
         }
     }
 
-    printf("\n\nMatriz LU \n\n");
+    printf("\n\nMatriz diag LU \n\n");
 
-    imprimirmat(mat_o,nlin,ncol);
+    imprimirmat_diag(mat_o,ncol);
 
+    for(i=0;i<ncol;i++)
+    {
+        if(1e-14>fabs(mat_o[i][i]))nnd++;
+    }
 
-    //fimprimirmat(fou, mat,  nlin, ncol);
-    //printf("Matriz saida \n\n");
-    //imprimirmat( &mat,  nlin, ncol);
-    //for (i=0;i<ncol;i++)
-    //{
-    //    printf("%e\t",mat[i][i]);
-    //}
-    //printf("\n%d\n\n",info);
-    //
-    //return 0;
+    printf("\n\nNND %d\n\n",nnd);
+    printf("\n\ninfo  %d\n\n",info);
 }

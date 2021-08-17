@@ -9,6 +9,7 @@ void imprimirvet_double(double* vet, int linha);
 void fimprimirvet_double(FILE* arquivo, double* vet, int linha);
 void imprimirvet_int(int* vet, int linha);
 void fimprimirvet_int(FILE* arquivo, int* vet, int linha);
+void imprimirmat_diag(double** mat, int col);
 
 
 #endif
