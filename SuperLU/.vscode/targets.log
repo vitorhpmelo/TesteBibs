@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 16 13:48:09 2021
+# Make data base, printed on Tue Aug 17 17:43:37 2021
 
 # Variables
 
@@ -53,7 +53,7 @@ _ = /usr/share/code/code
 # makefile (from 'Makefile', line 2)
 CFLAGS = -o -W -g
 # environment
-JOURNAL_STREAM = 8:42267
+JOURNAL_STREAM = 8:40520
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-pop:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -73,7 +73,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 1338
+MANAGERPID = 1389
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -89,7 +89,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1874,unix/pop-os:/tmp/.ICE-unix/1874
+SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1849,unix/pop-os:/tmp/.ICE-unix/1849
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,7 +99,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=865330db-dda3-4945-bf78-c35e4a1026a7&iid=865330db-dda3-4945-bf78-c35e4a1026a7&sid=865330db-dda3-4945-bf78-c35e4a1026a7","uploadToServer":true}
 # environment
-INVOCATION_ID = d4b07b7e1c1d4da6b8df41b97b2ab737
+INVOCATION_ID = 95ef913aa74e41f695b79f6f9bae2181
 # makefile (from 'Makefile', line 3)
 LDFLAGS = -lm -lsuperlu
 # default
@@ -111,7 +111,7 @@ XDG_SESSION_DESKTOP = pop
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 7917
+GIO_LAUNCHED_DESKTOP_FILE_PID = 35373
 # automatic
 %F = $(notdir $%)
 # environment
@@ -125,7 +125,7 @@ PWD = /home/vitorhpmelo/Programas/TesteBibs/SuperLU
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1752
+SSH_AGENT_PID = 1804
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = pop:GNOME
 # environment
@@ -165,7 +165,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = pop
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f101e22a-824c-4c3e-b2e9-f370c92b6d19.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-fe4a855d-7308-4d00-bea6-b71c83becd79.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -178,7 +178,6 @@ LC_MONETARY = en_US.UTF-8
 XDG_CURRENT_DESKTOP = Unity
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
- 
 # environment
 LC_TELEPHONE = en_US.UTF-8
 # default
@@ -242,7 +241,7 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 7917
+VSCODE_PID = 35373
 # variable set hash-table stats:
 # Load=116/1024=11%, Rehash=0, Collisions=21/144=15%
 
@@ -252,9 +251,9 @@ VSCODE_PID = 7917
 
 # Directories
 
-# . (device 2052, inode 807284): 19 files, no impossibilities.
+# . (device 2052, inode 807284): 18 files, no impossibilities.
 
-# 19 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -294,18 +293,19 @@ clean:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 13):
+ 
 	rm -f $(OBJFILES) $(TARGET) *~ 
 
 # Not a target:
 main.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-14 17:35:08.246899024
+#  Last modified 2021-08-17 17:41:46.338827498
 #  File has been updated.
 #  Successfully updated.
 
 output: main.o leitura.o matriz.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-14 17:35:08.278899024
+#  Last modified 2021-08-17 17:41:46.378827498
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -326,12 +326,12 @@ leitura.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 205 B / avg = 8 B
-# current buf: size = 8162 B / used = 205 B / count = 25 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 24 / storage = 201 B / avg = 8 B
+# current buf: size = 8162 B / used = 201 B / count = 24 / avg = 8 B
 
-# strcache performance: lookups = 38 / hit rate = 34%
+# strcache performance: lookups = 37 / hit rate = 35%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=1/38=3%
-# Finished Make data base on Mon Aug 16 13:48:09 2021
+# Load=24/8192=0%, Rehash=0, Collisions=1/37=3%
+# Finished Make data base on Tue Aug 17 17:43:37 2021
 
  
