@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 18 18:17:44 2021
+# Make data base, printed on Wed Aug 18 17:47:19 2021
 
 # Variables
 
@@ -43,7 +43,7 @@ GDMSESSION = pop
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/vitorhpmelo/Programas/TesteBibs/SuperLU
+CURDIR := /home/vitorhpmelo/Programas/TesteBibs/SuperLU/EX
 # makefile
 SHELL = /bin/sh
 # environment
@@ -121,7 +121,7 @@ OBJFILES = main.o leitura.o matriz.o
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/vitorhpmelo/Programas/TesteBibs/SuperLU
+PWD = /home/vitorhpmelo/Programas/TesteBibs/SuperLU/EX
 # default
 .LOADED := 
 # environment
@@ -165,7 +165,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = pop
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-362e96c1-da58-43b2-8f97-905ba93ba82c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ec88e07a-fe62-45f3-b919-836bba83c39a.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -251,9 +251,9 @@ VSCODE_PID = 26792
 
 # Directories
 
-# . (device 2052, inode 807284): 20 files, no impossibilities.
+# . (device 2052, inode 786983): 14 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -271,14 +271,14 @@ all: output
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-14 16:41:34.962905812
+#  Last modified 2021-08-18 16:58:59.882849692
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 matriz.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-14 16:41:34.962905812
+#  Last modified 2021-08-18 16:58:16.358849784
 #  File has been updated.
 #  Successfully updated.
 
@@ -293,19 +293,19 @@ clean:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 13):
+ 
 	rm -f $(OBJFILES) $(TARGET) *~ 
 
 # Not a target:
 main.o:
 #  Implicit rule search has been done.
- 
-#  Last modified 2021-08-18 17:46:22.882843686
+#  Last modified 2021-08-18 17:12:47.310847944
 #  File has been updated.
 #  Successfully updated.
 
 output: main.o leitura.o matriz.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-18 17:46:22.918843686
+#  Last modified 2021-08-18 17:12:47.346847944
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -314,7 +314,7 @@ output: main.o leitura.o matriz.o
 # Not a target:
 leitura.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-14 16:41:34.962905812
+#  Last modified 2021-08-18 16:58:07.178849803
 #  File has been updated.
 #  Successfully updated.
 
@@ -326,12 +326,12 @@ leitura.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 26 / storage = 202 B / avg = 7 B
-# current buf: size = 8162 B / used = 202 B / count = 26 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 20 / storage = 174 B / avg = 8 B
+# current buf: size = 8162 B / used = 174 B / count = 20 / avg = 8 B
 
-# strcache performance: lookups = 39 / hit rate = 33%
+# strcache performance: lookups = 33 / hit rate = 39%
 # hash-table stats:
-# Load=26/8192=0%, Rehash=0, Collisions=1/39=3%
-# Finished Make data base on Wed Aug 18 18:17:44 2021
+# Load=20/8192=0%, Rehash=0, Collisions=1/33=3%
+# Finished Make data base on Wed Aug 18 17:47:19 2021
 
  

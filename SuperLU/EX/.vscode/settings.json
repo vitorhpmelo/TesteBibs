@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "slu_ddefs.h": "c",
+        "leitura.h": "c",
+        "typeinfo": "cpp"
+    }
+}

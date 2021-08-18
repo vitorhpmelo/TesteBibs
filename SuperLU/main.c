@@ -16,7 +16,9 @@ int main()
     int *perm_c=NULL;
     int *perm_r=NULL;
     double *a=NULL;
-    SuperMatrix A,L,U,AC;
+    SuperMatrix A,AC;
+    SuperMatrix L,U;
+    int *etree;
     superlu_options_t options;
     set_default_options(&options);
     SuperLUStat_t stat;
@@ -24,11 +26,8 @@ int main()
     int panel_size;
     GlobalLU_t Glu;
     void *work;
-    int lwork =0;
-    int *etree;
 
-
-
+ 
 
     path =config();
     r_dmatfcsv(&mat,path,',',&nlin,&ncol);
@@ -47,9 +46,9 @@ int main()
     (void) CSC_to_matdb(&B,nlin,ncol,&nnz,a,r_index,c_ptr);
     imprimirmat(B,ncol,nlin);
     dCreate_CompCol_Matrix(&A, nlin, ncol, nnz, a, r_index, c_ptr, SLU_NC, SLU_D, SLU_GE);
-    panel_size=sp_ienv(1);
-    relax=sp_ienv(2);
-
+  
+    //L=(SuperMatrix*) SUPERLU_MALLOC(sizeof(SuperMatrix));
+    //U=(SuperMatrix*) SUPERLU_MALLOC(sizeof(SuperMatrix));
     etree=(int*)malloc((ncol)*sizeof(int));
     perm_c=(int*)malloc((ncol)*sizeof(int));
     perm_r=(int*)malloc((nlin)*sizeof(int));
@@ -57,12 +56,20 @@ int main()
     dPrint_CompCol_Matrix("A",&A);
     get_perm_c(3,&A,perm_c);
     sp_preorder(&options,&A,perm_c,etree,&AC);
-
-
+    //dPrint_SuperNode_Matrix("AC",&AC);
+    panel_size=sp_ienv(1);
+    relax=sp_ienv(2);
+    options.ColPerm = NATURAL;
+    //options.Fact=DOFACT;
+    StatInit(&stat);
     dgstrf(&options,&AC,relax,panel_size,etree,NULL,0,perm_c,perm_r,&L,&U,&Glu,&stat,&info);
 
+    
+
+
     printf("%d",info);
-    //dPrint_CompCol_Matrix("L",&L);
+    dPrint_SuperNode_Matrix("L",&L);
+    dPrint_CompCol_Matrix("U", &U);
 
     printf("\n");
 

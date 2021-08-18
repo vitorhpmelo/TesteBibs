@@ -1,8 +1,7 @@
-#include <stdlib.h>
-#include <math.h>
 #include "slu_ddefs.h"
 
-int main(int argc, char *argv[])
+
+void main(int argc, char *argv[])
 {
 /*
 * Purpose
@@ -54,7 +53,8 @@ dgssv(&options, &A, perm_c, perm_r, &L, &U, &B, &stat, &info);
 dPrint_CompCol_Matrix("A", &A);
 dPrint_CompCol_Matrix("U", &U);
 dPrint_SuperNode_Matrix("L", &L);
-print_int_vec("\nperm_r", m, perm_r);/* De-allocate storage */
+print_int_vec("\nperm_r", m, perm_r);
+/* De-allocate storage */
 SUPERLU_FREE (rhs);
 SUPERLU_FREE (perm_r);
 SUPERLU_FREE (perm_c);
