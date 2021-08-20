@@ -34,7 +34,6 @@ int main()
     imprimirmat(mat,ncol,nlin);
     printf("\n");
     (void) matdb_to_CSC(mat,nlin,ncol,&nnz,&a,&r_index,&c_ptr);
-    imprimirmat(mat,ncol,nlin);
     printf("Numero de não zeros %d\n\n",nnz);
 	printf("Vetor de valores:\n");
 	imprimirvet_double(a,nnz);
@@ -43,8 +42,7 @@ int main()
 	printf("Vetor de col:\n");
 	imprimirvet_int(c_ptr,ncol+1);
     printf("\n");
-    (void) CSC_to_matdb(&B,nlin,ncol,&nnz,a,r_index,c_ptr);
-    imprimirmat(B,ncol,nlin);
+
     dCreate_CompCol_Matrix(&A, nlin, ncol, nnz, a, r_index, c_ptr, SLU_NC, SLU_D, SLU_GE);
   
     //L=(SuperMatrix*) SUPERLU_MALLOC(sizeof(SuperMatrix));
@@ -56,20 +54,20 @@ int main()
     dPrint_CompCol_Matrix("A",&A);
     get_perm_c(3,&A,perm_c);
     sp_preorder(&options,&A,perm_c,etree,&AC);
-    //dPrint_SuperNode_Matrix("AC",&AC);
     panel_size=sp_ienv(1);
     relax=sp_ienv(2);
-    options.ColPerm = NATURAL;
-    //options.Fact=DOFACT;
+    //options.ColPerm = NATURAL;
+    options.Fact=DOFACT;
     StatInit(&stat);
     dgstrf(&options,&AC,relax,panel_size,etree,NULL,0,perm_c,perm_r,&L,&U,&Glu,&stat,&info);
+    
 
     
 
 
-    printf("%d",info);
+    
     dPrint_SuperNode_Matrix("L",&L);
-    dPrint_CompCol_Matrix("U", &U);
+    printf("%d",info);
 
     printf("\n");
 

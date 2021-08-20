@@ -27,6 +27,7 @@ int nrhs, info, i, m, n, nnz, permc_spec;
 superlu_options_t options;
 SuperLUStat_t stat;
 GlobalLU_t Glu;
+NCformat *Ustore;
 /* Initialize matrix A. */
 int relax,panel_size;
 int *etree;
@@ -64,6 +65,9 @@ dgssv(&options, &A, perm_c, perm_r, &L, &U, &B, &stat, &info);
 dPrint_CompCol_Matrix("A", &A);
 dPrint_CompCol_Matrix("U", &U);
 dPrint_SuperNode_Matrix("L", &L);
+printf("\n%d\n",info);
+Ustore = (NCformat *) U.Store;
+printf("\n\nnumero de nao zeros %d\n\n",Ustore->nnz);
 print_int_vec("\nperm_r", m, perm_r);
 /* De-allocate storage */
 SUPERLU_FREE (rhs);
