@@ -71,6 +71,8 @@ int main (void)
     Rs=(double*)malloc(nlin*sizeof(double));//The row scale factors are returned in Rs
     (void) umfpack_di_get_numeric(Lp,Lj,Lx,Up,Ui,Ux,P,Q,Dx,&recip,Rs,Numeric);
 
+    
+
     TUj=(int *) malloc(Unnz*sizeof(int));
 
 

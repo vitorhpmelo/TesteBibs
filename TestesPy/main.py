@@ -38,3 +38,6 @@ print(test2.nz)
 
 testUMFPACK = DS.SysH(np.loadtxt(open("../UMFPACK/Matrizes/matrizex.csv","rb"),delimiter=","))
 print(testUMFPACK.nz)
+
+IEEE123 = DS.SysH(np.loadtxt(open("../UMFPACK/Matrizes/123bus.csv","rb"),delimiter=","))
+print(IEEE123.nz)

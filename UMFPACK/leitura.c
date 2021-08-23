@@ -96,7 +96,9 @@ void fimprimirmat(FILE* arquivo, double** mat, int linha, int col)
 
 		for (j = 0; j < col; j++)
 		{
-			fprintf(arquivo, "%.2e\t ", mat[i][j]);
+            if (j+1==col) fprintf(arquivo, "%.2e\n ", mat[i][j]);
+            else fprintf(arquivo, "%.2e\t ", mat[i][j]);
+
 		}
 		fprintf(arquivo, "\n");
 	}
