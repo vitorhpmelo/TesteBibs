@@ -153,3 +153,19 @@ int matdb_to_triplet(double **A,int nlin,int ncol,int *nnz,double **Ax,int** Ai,
 
 	return 0;
 }
+
+int triplet_to_matdb(double ***A,int n_row,int n_col,int *Aj,int *Ai, double *Ax, int nnz)
+{
+	
+	int i;
+	(void) matrizDinamica(A,n_row,n_col);
+	for ( i = 0; i < nnz; i++)
+	{
+		
+		(*A)[Ai[i]][Aj[i]]=Ax[i];
+	}
+	
+
+
+	return 0;
+}

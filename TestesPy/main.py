@@ -36,3 +36,5 @@ print(test.nz)
 test2 = DS.SysH(np.loadtxt(open("../SuperLU/Matrizes/mat_test2.csv","rb"),delimiter=","))
 print(test2.nz)
 
+testUMFPACK = DS.SysH(np.loadtxt(open("../UMFPACK/Matrizes/matrizex.csv","rb"),delimiter=","))
+print(testUMFPACK.nz)

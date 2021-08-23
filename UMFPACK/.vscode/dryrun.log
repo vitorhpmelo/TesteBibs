@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/vitorhpmelo/Programas/TesteBibs/UMFPACK'
+gcc -o -W -g   -c -o teste.o teste.c
+gcc -o -W -g   -c -o matriz.o matriz.c
+gcc -o -W -g   -c -o leitura.o leitura.c
+gcc -o -W -g -o teste teste.o matriz.o leitura.o -lm -lumfpack
+make: Leaving directory '/home/vitorhpmelo/Programas/TesteBibs/UMFPACK'
+ 

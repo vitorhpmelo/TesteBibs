@@ -9,6 +9,8 @@ char *config()
 {
     FILE *arquivo=NULL;
     arquivo = fopen("config.txt","r");
+
+    if (arquivo == NULL) return "-1";
     char p;
     char *path;
     path=(char*) malloc(100*sizeof(char));
@@ -34,7 +36,7 @@ int r_dmatfcsv(double ***mat,char path[100],char sep,int *nlin,int *ncol)//Lê u
     int i =0,j=0;
     arquivo = fopen(path,"r");
    
-    if (arquivo==NULL) return NULL;
+    if (arquivo==NULL) return 1;
     while ((p=fgetc(arquivo))!=EOF)
     {
         if (p==sep && (*nlin)==0) (*ncol)++;
