@@ -100,7 +100,7 @@ void fimprimirmat(FILE* arquivo, double** mat, int linha, int col)
             else fprintf(arquivo, "%.2e\t ", mat[i][j]);
 
 		}
-		fprintf(arquivo, "\n");
+		
 	}
 }
 void imprimirvet_double(double* vet, int linha)

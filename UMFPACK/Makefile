@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS= -o -W -g
+CFLAGS= -o -W -g -Wall
 LDFLAGS= -lm -lumfpack
 OBJFILES = teste.o matriz.o leitura.o
 TARGET = teste
