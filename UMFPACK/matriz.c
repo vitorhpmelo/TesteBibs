@@ -90,10 +90,9 @@ int CSC_to_matdb (double ***A, int nlin,int ncol,int* nnz, double* a,int* r_inde
 {
 
 
-	int i,j,k,m;
+	int j,k,m;
 	(void) matrizDinamica(A,nlin,ncol);
 
-	i=0;
 	j=0;
 	k=0;
 

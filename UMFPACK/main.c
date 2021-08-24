@@ -10,9 +10,6 @@
 
 
 
-
-
-
 int main (void)
 {
     double **A;

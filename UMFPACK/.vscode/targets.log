@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 24 18:01:39 2021
+# Make data base, printed on Tue Aug 24 18:09:26 2021
 
 # Variables
 
@@ -115,7 +115,7 @@ XDG_SESSION_DESKTOP = pop
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 41687
+GIO_LAUNCHED_DESKTOP_FILE_PID = 43115
 # automatic
 %F = $(notdir $%)
 # environment
@@ -123,7 +123,7 @@ DISPLAY = :1
 # environment
 CONDA_EXE = /home/vitorhpmelo/anaconda3/bin/conda
 # makefile (from 'Makefile', line 4)
-OBJFILES = teste.o matriz.o leitura.o numref.o
+OBJFILES = main.o matriz.o leitura.o numref.o
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -175,7 +175,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = pop
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-06acb782-c8c3-43b6-9b79-16dfe805bbdd.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ca434de5-97a1-4c2a-8cf9-36376752687d.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -259,7 +259,7 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 41687
+VSCODE_PID = 43115
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
@@ -271,9 +271,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 2052, inode 807230): 20 files, no impossibilities.
+# . (device 2052, inode 807230): 21 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 21 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -291,15 +291,15 @@ all: teste
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 17:55:24.94640574
+ 
+#  Last modified 2021-08-24 18:08:52.626378518
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 matriz.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 13:29:48.418863984
- 
+#  Last modified 2021-08-24 18:09:13.974377798
 #  File has been updated.
 #  Successfully updated.
 
@@ -317,33 +317,33 @@ clean:
 	rm -f $(OBJFILES) $(TARGET) *~ 
 
 # Not a target:
+main.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-24 18:09:13.9303778
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
 numref.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 17:55:26.962405672
+#  Last modified 2021-08-24 18:09:14.054377795
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 leitura.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 14:42:01.602796826
+#  Last modified 2021-08-24 18:09:14.010377797
 #  File has been updated.
 #  Successfully updated.
 
-teste: teste.o matriz.o leitura.o numref.o
+teste: main.o matriz.o leitura.o numref.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-24 17:55:27.01440567
+#  Last modified 2021-08-24 18:09:14.102377794
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
 		$(CC) $(CFLAGS) -o $(TARGET) $(OBJFILES) $(LDFLAGS)
-
-# Not a target:
-teste.o:
-#  Implicit rule search has been done.
-#  Last modified 2021-08-24 17:55:26.922405674
-#  File has been updated.
-#  Successfully updated.
 
 # files hash-table stats:
 # Load=10/1024=1%, Rehash=0, Collisions=0/27=0%
@@ -353,12 +353,12 @@ teste.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 26 / storage = 225 B / avg = 8 B
-# current buf: size = 8162 B / used = 225 B / count = 26 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 27 / storage = 231 B / avg = 8 B
+# current buf: size = 8162 B / used = 231 B / count = 27 / avg = 8 B
 
-# strcache performance: lookups = 40 / hit rate = 35%
+# strcache performance: lookups = 41 / hit rate = 34%
 # hash-table stats:
-# Load=26/8192=0%, Rehash=0, Collisions=1/40=2%
-# Finished Make data base on Tue Aug 24 18:01:39 2021
+# Load=27/8192=0%, Rehash=0, Collisions=1/41=2%
+# Finished Make data base on Tue Aug 24 18:09:26 2021
 
  

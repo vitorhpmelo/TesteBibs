@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS= -o -W -g -Wall
 LDFLAGS= -lm -lumfpack
-OBJFILES = teste.o matriz.o leitura.o numref.o
+OBJFILES = main.o matriz.o leitura.o numref.o
 TARGET = teste
 
 all: $(TARGET)
