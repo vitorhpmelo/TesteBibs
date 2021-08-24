@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 24 16:58:46 2021
+# Make data base, printed on Tue Aug 24 18:01:39 2021
 
 # Variables
 
@@ -115,7 +115,7 @@ XDG_SESSION_DESKTOP = pop
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 6088
+GIO_LAUNCHED_DESKTOP_FILE_PID = 41687
 # automatic
 %F = $(notdir $%)
 # environment
@@ -123,7 +123,7 @@ DISPLAY = :1
 # environment
 CONDA_EXE = /home/vitorhpmelo/anaconda3/bin/conda
 # makefile (from 'Makefile', line 4)
-OBJFILES = teste.o matriz.o leitura.o
+OBJFILES = teste.o matriz.o leitura.o numref.o
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -175,7 +175,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = pop
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-8f5a47a1-70f2-4bb9-9c97-f101be7442ba.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-06acb782-c8c3-43b6-9b79-16dfe805bbdd.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -259,7 +259,7 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 6088
+VSCODE_PID = 41687
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
@@ -271,9 +271,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 2052, inode 807230): 17 files, no impossibilities.
+# . (device 2052, inode 807230): 20 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -291,7 +291,7 @@ all: teste
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 16:58:37.902520573
+#  Last modified 2021-08-24 17:55:24.94640574
 #  File has been updated.
 #  Successfully updated.
 
@@ -299,6 +299,7 @@ Makefile:
 matriz.o:
 #  Implicit rule search has been done.
 #  Last modified 2021-08-23 13:29:48.418863984
+ 
 #  File has been updated.
 #  Successfully updated.
 
@@ -314,7 +315,13 @@ clean:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 13):
 	rm -f $(OBJFILES) $(TARGET) *~ 
- 
+
+# Not a target:
+numref.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-24 17:55:26.962405672
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 leitura.o:
@@ -323,9 +330,9 @@ leitura.o:
 #  File has been updated.
 #  Successfully updated.
 
-teste: teste.o matriz.o leitura.o
+teste: teste.o matriz.o leitura.o numref.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-24 16:58:39.806520509
+#  Last modified 2021-08-24 17:55:27.01440567
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -334,24 +341,24 @@ teste: teste.o matriz.o leitura.o
 # Not a target:
 teste.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 16:58:39.754520511
+#  Last modified 2021-08-24 17:55:26.922405674
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=9/1024=1%, Rehash=0, Collisions=0/25=0%
+# Load=10/1024=1%, Rehash=0, Collisions=0/27=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 23 / storage = 198 B / avg = 8 B
-# current buf: size = 8162 B / used = 198 B / count = 23 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 26 / storage = 225 B / avg = 8 B
+# current buf: size = 8162 B / used = 225 B / count = 26 / avg = 8 B
 
-# strcache performance: lookups = 36 / hit rate = 36%
+# strcache performance: lookups = 40 / hit rate = 35%
 # hash-table stats:
-# Load=23/8192=0%, Rehash=0, Collisions=1/36=3%
-# Finished Make data base on Tue Aug 24 16:58:46 2021
+# Load=26/8192=0%, Rehash=0, Collisions=1/40=2%
+# Finished Make data base on Tue Aug 24 18:01:39 2021
 
  
